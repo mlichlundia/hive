@@ -1,0 +1,21 @@
+@use "sass:map";
+@use "sass:math";
+@use "sass:list";
+
+@use '../variables' as *;
+
+@function rem($value) {
+  @debug strip-units($value);
+  @return #{ math.div(strip-units($value), strip-units($font-base))}rem;
+}
+
+@function strip-units($value) {
+  @if type-of($value) == 'number' and not unitless($value) {
+    @return math.div($value, ($value * 0 + 1));
+  }
+  @return $value;
+}
+
+@function get-breakpoint($value) {
+  @return map.get($breakpoints, $value);
+}

@@ -1,0 +1,29 @@
+@forward 'base';
+@forward 'variables';
+@forward 'utils';
+
+@use 'base' as *;
+@use 'variables' as *;
+@use 'utils' as *;
+
+* {
+  font-family: "Manrope", Arial, sans-serif;
+  font-weight: 400;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  @include generate-breakpoints;
+}
+
+body {
+  background: $gray-100;
+}
+
+::selection {
+  color: $gray-900;
+  background: $primary-200;
+}

@@ -1,0 +1,31 @@
+@use "functions" as *;
+@use "../variables" as *;
+
+@mixin generate-colors() {
+  @each $key, $value in $colors {
+    --color-#{$key}: #{$value};
+  }
+}
+
+@mixin generate-breakpoints() {
+  @each $key, $value in $breakpoints {
+    --breakpoint-#{$key}: #{$value};
+  }
+}
+
+@mixin lg {
+  @media screen and (min-width: get-breakpoint(lg)) {
+    @content;
+  }
+}
+
+@mixin tooltip {
+  max-width: 280px;
+  padding: rem(8) rem(12);
+  border-radius: rem(10);
+  color: yellow;
+  background: color(light-gray-200);
+  color: rgba(color-hex(black-color), 0.5);
+  font-size: rem(12);
+  line-height: 130%;
+}
