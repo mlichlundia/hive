@@ -1,0 +1,11 @@
+@use 'src/styles/styles' as *;
+
+:host {
+  display: flex;
+  gap: rem(32);
+  padding: rem(16);
+
+  > :last-child {
+    flex-grow: 1;
+  }
+}

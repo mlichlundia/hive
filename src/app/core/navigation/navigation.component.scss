@@ -1,0 +1,28 @@
+@use 'src/styles/styles' as *;
+
+.navigation {
+  width: rem(240);
+  padding: rem(16);
+  border-radius: rem(12);
+  background: $white;
+  border: rem(1) solid $gray-200;
+
+  &__title {
+    margin-bottom: rem(16);
+    font-weight: 700;
+    letter-spacing: rem(.5);
+    color: $primary-500;
+  }
+}
+
+.menu {
+  &__item {
+    display: block;
+    padding: rem(16);
+    border-radius: rem(8);
+
+    &:hover, &.active {
+      background: $gray-100;
+    }
+  }
+}

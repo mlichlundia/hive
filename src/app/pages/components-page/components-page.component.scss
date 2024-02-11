@@ -1,0 +1,14 @@
+@use 'src/styles/styles' as *;
+
+h1 {
+  padding-bottom: rem(24);
+}
+
+h3 {
+  padding: rem(24) 0 rem(8);
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: rem(16);
+}
