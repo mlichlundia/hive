@@ -1,0 +1,13 @@
+<b>Count: {{ count() }}</b>
+<div class="actions">
+  <button mat-icon-button color="primary" (click)="increase()">+</button>
+  <button mat-icon-button color="primary" (click)="decrease()">-</button>
+</div>
+<button
+  mat-flat-button
+  color="primary"
+  (click)="toggle()"
+>{{ showNewCount() ? 'On' : 'Off' }}
+</button>
+<p>Calculation result: <b>{{ computedCount() }}</b></p>
+<p>Count after switcher on: <b>{{currentCount}}</b></p>

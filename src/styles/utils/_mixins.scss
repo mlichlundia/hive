@@ -19,13 +19,47 @@
   }
 }
 
-@mixin tooltip {
-  max-width: 280px;
-  padding: rem(8) rem(12);
-  border-radius: rem(10);
-  color: yellow;
-  background: color(light-gray-200);
-  color: rgba(color-hex(black-color), 0.5);
-  font-size: rem(12);
-  line-height: 130%;
+@mixin page {
+  display: block;
+  padding: rem(64);
+  width: rem(720);
+
+  h2 {
+    margin-bottom: rem(24);
+  }
+
+  h3 {
+    margin-bottom: rem(16);
+  }
+
+  p {
+    margin: rem(12) 0;
+  }
+
+  section {
+    margin-bottom: rem(40);
+  }
+
+  .sub-section {
+    margin-top: rem(32);
+  }
+
+  ul {
+    margin: rem(16) 0 rem(32);
+    padding-left: rem(40);
+
+    li {
+      font-size: rem(14);
+      line-height: 200%;
+    }
+  }
+
+  app-code-block {
+    display: block;
+    margin: rem(16) 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
 }

@@ -1,0 +1,67 @@
+<section>
+  <h2>Signals</h2>
+  <p>
+    A signal is a wrapper around a value that notifies interested consumers when that value changes. Signals can contain
+    any value, from simple primitives to complex data structures.
+  </p>
+
+  <div class="sub-section">
+    <h3>Basic example</h3>
+    <app-base-example></app-base-example>
+  </div>
+
+  <div class="sub-section">
+    <h3>What Computed signal depend on?</h3>
+    <p>
+      If <i>showCount()</i> returns <b>false</b>, <i>count()</i> updates are <b>NOT</b> affect <i>conditionalCount</i>.
+      <br>
+      If <i>showCount()</i> returns <b>true</b>, <i>count()</i> updates affect <i>conditionalCount</i>.
+    </p>
+    <app-code-block [code]="signalDependency"></app-code-block>
+  </div>
+</section>
+
+<section>
+  <h2>Effects</h2>
+  <p>An effect is an operation that runs whenever one or more signal values change. </p>
+  <p>Effects always run at least once.</p>
+
+  <div class="sub-section">
+    <h3>Use cases of the effects</h3>
+    <ul>
+      <li>Logging data being displayed and when it changes, either for analytics or as a debugging tool.</li>
+      <li>Keeping data in sync with window.localStorage.</li>
+      <li>Adding custom DOM behavior that can't be expressed with template syntax.</li>
+      <li>Performing custom rendering to a &lt;canvas&gt;, charting library, or other third party UI library.</li>
+    </ul>
+
+    <b>Avoid using effects for propagation of state changes.</b>
+
+    <p>Effect should be used inside <a href="https://angular.dev/guide/signals#injection-context" target="_blank">injection
+      context</a></p>
+  </div>
+
+  <div class="sub-section">
+    <h3>Reading without tracking dependencies</h3>
+    <app-code-block [code]="untracked_1"></app-code-block>
+    <app-code-block [code]="untracked_2"></app-code-block>
+  </div>
+
+  <div class="sub-section">
+    <h3>Effect cleanup functions</h3>
+    <app-code-block [code]="cleanUp"></app-code-block>
+  </div>
+
+  <div class="sub-section">
+    <h3>Effect + dependency example</h3>
+    <app-effect-dependency-example></app-effect-dependency-example>
+  </div>
+
+  <div class="sub-section">
+    <h3>Optimization</h3>
+    <p>To check whether the new value is actually different than the previous one use <b>&#123;equal:
+      _.isEqual&#125;</b>.
+    </p>
+    <app-code-block [code]="optimization"></app-code-block>
+  </div>
+</section>

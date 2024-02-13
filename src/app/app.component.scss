@@ -3,9 +3,9 @@
 :host {
   display: flex;
   gap: rem(32);
-  padding: rem(16);
 
-  > :last-child {
+  .content {
     flex-grow: 1;
+    margin-left: $navigation-width;
   }
 }

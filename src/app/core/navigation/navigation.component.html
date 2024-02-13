@@ -1,6 +1,8 @@
 <div class="navigation">
   <p class="navigation__title">◯ HIVE</p>
   <ul class="menu">
-    <li><a class="menu__item" routerLink="components" routerLinkActive="active">Components</a></li>
+    @for (item of menuData; track item.label) {
+      <li><a class="menu__item" [routerLink]="item.link" routerLinkActive="active">{{ item.label }}</a></li>
+    }
   </ul>
 </div>

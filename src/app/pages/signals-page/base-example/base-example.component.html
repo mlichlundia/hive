@@ -1,0 +1,15 @@
+<p>Result: <b>{{ result() }}</b></p>
+<p>The result is multiplied by 2: <b>{{ doubleResult() }}</b></p>
+<div class="actions">
+  <button mat-icon-button color="primary" (click)="increase()">+</button>
+  <button mat-icon-button color="primary" (click)="decrease()">-</button>
+</div>
+
+<mat-form-field appearance="outline">
+  <mat-label>Enter result</mat-label>
+  <input
+    matInput
+    type="number"
+    [formControl]="control"
+  >
+</mat-form-field>

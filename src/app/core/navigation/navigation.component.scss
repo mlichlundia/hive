@@ -1,14 +1,23 @@
 @use 'src/styles/styles' as *;
 
+:host {
+  position: fixed;
+  display: block;
+  height: 100vh;
+
+}
+
 .navigation {
-  width: rem(240);
-  padding: rem(16);
-  border-radius: rem(12);
+  width: $navigation-width;
+  height: 100%;
+  padding: rem(32) 0;
   background: $white;
-  border: rem(1) solid $gray-200;
+  border-right: rem(1) solid $gray-200;
 
   &__title {
     margin-bottom: rem(16);
+    padding: 0 rem(16);
+    font-size: rem(20);
     font-weight: 700;
     letter-spacing: rem(.5);
     color: $primary-500;
@@ -16,13 +25,19 @@
 }
 
 .menu {
+  list-style-type: none;
+
   &__item {
     display: block;
-    padding: rem(16);
-    border-radius: rem(8);
+    padding: rem(20) rem(16);
+    border-left: rem(2) solid transparent;
 
     &:hover, &.active {
       background: $gray-100;
+    }
+
+    &.active {
+      border-left-color: $gray-900;
     }
   }
 }

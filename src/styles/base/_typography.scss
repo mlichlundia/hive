@@ -9,20 +9,21 @@ h3, h4 {
   line-height: 140%;
 }
 
+h1, h2, h3, h4, h5 {
+  font-weight: 500;
+}
+
 h4, h5, p {
   color: $gray-800;
 }
 
 h2 {
   font-size: rem(32);
-  font-weight: 500;
   line-height: 120%;
-  letter-spacing: rem(2);
-  text-transform: uppercase;
 }
 
 h3 {
-  font-size: rem(24);
+  font-size: rem(20);
 }
 
 h4 {
@@ -35,6 +36,6 @@ h5 {
 }
 
 p {
-  font-size: rem(16);
+  font-size: rem(14);
   line-height: 180%;
 }

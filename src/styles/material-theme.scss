@@ -17,3 +17,10 @@ $hive-theme: mat.define-light-theme((
 ));
 
 @include mat.all-component-themes($hive-theme);
+
+
+.mdc-icon-button {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
